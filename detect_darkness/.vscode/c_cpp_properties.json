@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/yu/ros/workspace/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/yu/ros/workspace/src/detect_darkness/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "compileCommands": "/home/yu/ros/workspace/build/compile_commands.json"
+    }
+  ],
+  "version": 4
+}
