@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/yu/ros/workspace/src/ws_moveit/install/setup.sh

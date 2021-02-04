@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/detect_darkness_generate_messages_py"
-  "../devel/lib/python2.7/dist-packages/detect_darkness/srv/_move_direction.py"
+  "../devel/lib/python2.7/dist-packages/detect_darkness/srv/_detect_process.py"
   "../devel/lib/python2.7/dist-packages/detect_darkness/srv/__init__.py"
 )
 

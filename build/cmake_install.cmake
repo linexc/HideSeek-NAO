@@ -127,6 +127,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/yu/ros/workspace/src/build/gtest/cmake_install.cmake")
   include("/home/yu/ros/workspace/src/build/detect_darkness/cmake_install.cmake")
+  include("/home/yu/ros/workspace/src/build/ws_moveit/src/moveit_tutorials/cmake_install.cmake")
+  include("/home/yu/ros/workspace/src/build/ws_moveit/src/panda_moveit_config/cmake_install.cmake")
 
 endif()
 

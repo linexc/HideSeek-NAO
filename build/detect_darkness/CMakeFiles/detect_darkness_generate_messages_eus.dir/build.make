@@ -53,21 +53,21 @@ CMAKE_BINARY_DIR = /home/yu/ros/workspace/src/build
 # Include the progress variables for this target.
 include detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/progress.make
 
-detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus: devel/share/roseus/ros/detect_darkness/srv/move_direction.l
+detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus: devel/share/roseus/ros/detect_darkness/srv/detect_process.l
 detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus: devel/share/roseus/ros/detect_darkness/manifest.l
 
 
-devel/share/roseus/ros/detect_darkness/srv/move_direction.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-devel/share/roseus/ros/detect_darkness/srv/move_direction.l: ../detect_darkness/srv/move_direction.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yu/ros/workspace/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from detect_darkness/move_direction.srv"
-	cd /home/yu/ros/workspace/src/build/detect_darkness && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p detect_darkness -o /home/yu/ros/workspace/src/build/devel/share/roseus/ros/detect_darkness/srv
+devel/share/roseus/ros/detect_darkness/srv/detect_process.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+devel/share/roseus/ros/detect_darkness/srv/detect_process.l: ../detect_darkness/srv/detect_process.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yu/ros/workspace/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from detect_darkness/detect_process.srv"
+	cd /home/yu/ros/workspace/src/build/detect_darkness && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p detect_darkness -o /home/yu/ros/workspace/src/build/devel/share/roseus/ros/detect_darkness/srv
 
 devel/share/roseus/ros/detect_darkness/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yu/ros/workspace/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for detect_darkness"
-	cd /home/yu/ros/workspace/src/build/detect_darkness && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/yu/ros/workspace/src/build/devel/share/roseus/ros/detect_darkness detect_darkness std_msgs
+	cd /home/yu/ros/workspace/src/build/detect_darkness && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/yu/ros/workspace/src/build/devel/share/roseus/ros/detect_darkness detect_darkness std_msgs actionlib_msgs std_msgs
 
 detect_darkness_generate_messages_eus: detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus
-detect_darkness_generate_messages_eus: devel/share/roseus/ros/detect_darkness/srv/move_direction.l
+detect_darkness_generate_messages_eus: devel/share/roseus/ros/detect_darkness/srv/detect_process.l
 detect_darkness_generate_messages_eus: devel/share/roseus/ros/detect_darkness/manifest.l
 detect_darkness_generate_messages_eus: detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/build.make
 

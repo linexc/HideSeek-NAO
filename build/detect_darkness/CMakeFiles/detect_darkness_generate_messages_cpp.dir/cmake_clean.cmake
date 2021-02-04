@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/detect_darkness_generate_messages_cpp"
-  "../devel/include/detect_darkness/move_direction.h"
+  "../devel/include/detect_darkness/detect_process.h"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -5,4 +5,4 @@ Description: Description of detect_darkness
 Version: 0.0.0
 Cflags: -I/home/yu/ros/workspace/src/build/devel/include
 Libs: -L${prefix}/lib 
-Requires: message_runtime
+Requires: message_runtime actionlib_msgs

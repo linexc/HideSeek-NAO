@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /home/yu/ros/workspace/src/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -67,16 +78,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : edit_cache/fast
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -100,17 +111,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -122,16 +122,16 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target test
+test/fast: test
 
-.PHONY : install/local/fast
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,351 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+detect_darkness/CMakeFiles/tf_listener.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf_listener.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf_listener.dir/rule
+
+# Convenience name for target.
+tf_listener: detect_darkness/CMakeFiles/tf_listener.dir/rule
+
+.PHONY : tf_listener
+
+# fast build rule for target.
+tf_listener/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf_listener.dir/build.make detect_darkness/CMakeFiles/tf_listener.dir/build
+.PHONY : tf_listener/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/rule
+
+# Convenience name for target.
+detect_darkness_gennodejs: detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/rule
+
+.PHONY : detect_darkness_gennodejs
+
+# fast build rule for target.
+detect_darkness_gennodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/build.make detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/build
+.PHONY : detect_darkness_gennodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+detect_darkness_generate_messages_nodejs: detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/rule
+
+.PHONY : detect_darkness_generate_messages_nodejs
+
+# fast build rule for target.
+detect_darkness_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/build
+.PHONY : detect_darkness_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/rule
+
+# Convenience name for target.
+detect_darkness_genlisp: detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/rule
+
+.PHONY : detect_darkness_genlisp
+
+# fast build rule for target.
+detect_darkness_genlisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/build.make detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/build
+.PHONY : detect_darkness_genlisp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+detect_darkness_generate_messages_lisp: detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/rule
+
+.PHONY : detect_darkness_generate_messages_lisp
+
+# fast build rule for target.
+detect_darkness_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/build
+.PHONY : detect_darkness_generate_messages_lisp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_geneus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_geneus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_geneus.dir/rule
+
+# Convenience name for target.
+detect_darkness_geneus: detect_darkness/CMakeFiles/detect_darkness_geneus.dir/rule
+
+.PHONY : detect_darkness_geneus
+
+# fast build rule for target.
+detect_darkness_geneus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_geneus.dir/build.make detect_darkness/CMakeFiles/detect_darkness_geneus.dir/build
+.PHONY : detect_darkness_geneus/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+detect_darkness_generate_messages_eus: detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/rule
+
+.PHONY : detect_darkness_generate_messages_eus
+
+# fast build rule for target.
+detect_darkness_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/build
+.PHONY : detect_darkness_generate_messages_eus/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_nodejs: detect_darkness/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_lisp: detect_darkness/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_lisp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_eus: detect_darkness/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_eus
+
+# fast build rule for target.
+tf2_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+detect_darkness_generate_messages_cpp: detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/rule
+
+.PHONY : detect_darkness_generate_messages_cpp
+
+# fast build rule for target.
+detect_darkness_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/build
+.PHONY : detect_darkness_generate_messages_cpp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_eus: detect_darkness/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_generate_messages_eus
+
+# fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_detect_process.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_detect_process.dir/rule
+.PHONY : detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_detect_process.dir/rule
+
+# Convenience name for target.
+_detect_darkness_generate_messages_check_deps_detect_process: detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_detect_process.dir/rule
+
+.PHONY : _detect_darkness_generate_messages_check_deps_detect_process
+
+# fast build rule for target.
+_detect_darkness_generate_messages_check_deps_detect_process/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_detect_process.dir/build.make detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_detect_process.dir/build
+.PHONY : _detect_darkness_generate_messages_check_deps_detect_process/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: detect_darkness/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/tf_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_eus: detect_darkness/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_nodejs: detect_darkness/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_srvs_generate_messages_nodejs
+
+# fast build rule for target.
+std_srvs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+.PHONY : std_srvs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_cpp: detect_darkness/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_eus: detect_darkness/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+.PHONY : std_srvs_generate_messages_eus
+
+# fast build rule for target.
+std_srvs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+.PHONY : std_srvs_generate_messages_eus/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_cpp: detect_darkness/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_py: detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_py
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+.PHONY : trajectory_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_nodejs: detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+.PHONY : trajectory_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_lisp: detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_lisp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+.PHONY : trajectory_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_eus: detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_eus
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+.PHONY : trajectory_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 detect_darkness/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 .PHONY : detect_darkness/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
@@ -179,6 +524,21 @@ sensor_msgs_generate_messages_lisp: detect_darkness/CMakeFiles/sensor_msgs_gener
 sensor_msgs_generate_messages_lisp/fast:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/tf_broadcaster.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf_broadcaster.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf_broadcaster.dir/rule
+
+# Convenience name for target.
+tf_broadcaster: detect_darkness/CMakeFiles/tf_broadcaster.dir/rule
+
+.PHONY : tf_broadcaster
+
+# fast build rule for target.
+tf_broadcaster/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf_broadcaster.dir/build.make detect_darkness/CMakeFiles/tf_broadcaster.dir/build
+.PHONY : tf_broadcaster/fast
 
 # Convenience name for target.
 detect_darkness/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
@@ -211,6 +571,21 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+detect_darkness/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_lisp: detect_darkness/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+.PHONY : std_srvs_generate_messages_lisp
+
+# fast build rule for target.
+std_srvs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
+
+# Convenience name for target.
 detect_darkness/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 .PHONY : detect_darkness/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
@@ -224,6 +599,21 @@ geometry_msgs_generate_messages_lisp: detect_darkness/CMakeFiles/geometry_msgs_g
 geometry_msgs_generate_messages_lisp/fast:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_py: detect_darkness/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+.PHONY : std_srvs_generate_messages_py
+
+# fast build rule for target.
+std_srvs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/std_srvs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
 detect_darkness/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
@@ -256,6 +646,36 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
+detect_darkness/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_cpp: detect_darkness/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+naoqi_bridge_msgs_generate_messages_cpp: detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : naoqi_bridge_msgs_generate_messages_cpp
+
+# fast build rule for target.
+naoqi_bridge_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/build
+.PHONY : naoqi_bridge_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 detect_darkness/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : detect_darkness/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
@@ -286,6 +706,51 @@ rosgraph_msgs_generate_messages_lisp/fast:
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_genpy.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_genpy.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_genpy.dir/rule
+
+# Convenience name for target.
+detect_darkness_genpy: detect_darkness/CMakeFiles/detect_darkness_genpy.dir/rule
+
+.PHONY : detect_darkness_genpy
+
+# fast build rule for target.
+detect_darkness_genpy/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_genpy.dir/build.make detect_darkness/CMakeFiles/detect_darkness_genpy.dir/build
+.PHONY : detect_darkness_genpy/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_lisp: detect_darkness/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 detect_darkness/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : detect_darkness/CMakeFiles/roscpp_generate_messages_eus.dir/rule
@@ -301,6 +766,21 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
+detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+naoqi_bridge_msgs_generate_messages_lisp: detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : naoqi_bridge_msgs_generate_messages_lisp
+
+# fast build rule for target.
+naoqi_bridge_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/build
+.PHONY : naoqi_bridge_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
 detect_darkness/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : detect_darkness/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
@@ -314,51 +794,6 @@ sensor_msgs_generate_messages_nodejs: detect_darkness/CMakeFiles/sensor_msgs_gen
 sensor_msgs_generate_messages_nodejs/fast:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/rule
-
-# Convenience name for target.
-detect_darkness_genlisp: detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/rule
-
-.PHONY : detect_darkness_genlisp
-
-# fast build rule for target.
-detect_darkness_genlisp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/build.make detect_darkness/CMakeFiles/detect_darkness_genlisp.dir/build
-.PHONY : detect_darkness_genlisp/fast
-
-# Convenience name for target.
-detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
@@ -421,6 +856,21 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_py: detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_py
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
@@ -434,6 +884,96 @@ rosgraph_msgs_generate_messages_nodejs: detect_darkness/CMakeFiles/rosgraph_msgs
 rosgraph_msgs_generate_messages_nodejs/fast:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_nodejs: detect_darkness/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+naoqi_bridge_msgs_generate_messages_py: detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule
+
+.PHONY : naoqi_bridge_msgs_generate_messages_py
+
+# fast build rule for target.
+naoqi_bridge_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/build
+.PHONY : naoqi_bridge_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_cpp: detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_cpp: detect_darkness/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
@@ -451,6 +991,21 @@ rosgraph_msgs_generate_messages_eus/fast:
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+detect_darkness/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_nodejs: detect_darkness/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+
+.PHONY : tf_generate_messages_nodejs
+
+# fast build rule for target.
+tf_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
+
+# Convenience name for target.
 detect_darkness/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : detect_darkness/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -464,6 +1019,51 @@ roscpp_generate_messages_py: detect_darkness/CMakeFiles/roscpp_generate_messages
 roscpp_generate_messages_py/fast:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/roscpp_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/rule
+
+# Convenience name for target.
+detect_darkness_generate_messages: detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/rule
+
+.PHONY : detect_darkness_generate_messages
+
+# fast build rule for target.
+detect_darkness_generate_messages/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/build
+.PHONY : detect_darkness_generate_messages/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+aruco_msgs_generate_messages_eus: detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/rule
+
+.PHONY : aruco_msgs_generate_messages_eus
+
+# fast build rule for target.
+aruco_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/build
+.PHONY : aruco_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: detect_darkness/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
 
 # Convenience name for target.
 detect_darkness/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
@@ -481,21 +1081,6 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 detect_darkness/CMakeFiles/aruco_msgs_generate_messages_lisp.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/aruco_msgs_generate_messages_lisp.dir/rule
 .PHONY : detect_darkness/CMakeFiles/aruco_msgs_generate_messages_lisp.dir/rule
@@ -511,19 +1096,49 @@ aruco_msgs_generate_messages_lisp/fast:
 .PHONY : aruco_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/rule
+detect_darkness/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-detect_darkness_generate_messages_nodejs: detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/rule
+nav_msgs_generate_messages_eus: detect_darkness/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 
-.PHONY : detect_darkness_generate_messages_nodejs
+.PHONY : nav_msgs_generate_messages_eus
 
 # fast build rule for target.
-detect_darkness_generate_messages_nodejs/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_nodejs.dir/build
-.PHONY : detect_darkness_generate_messages_nodejs/fast
+nav_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+.PHONY : nav_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/rule
+
+# Convenience name for target.
+detect_darkness_generate_messages_py: detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/rule
+
+.PHONY : detect_darkness_generate_messages_py
+
+# fast build rule for target.
+detect_darkness_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/build
+.PHONY : detect_darkness_generate_messages_py/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 detect_darkness/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
@@ -556,6 +1171,21 @@ geometry_msgs_generate_messages_py/fast:
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+detect_darkness/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: detect_darkness/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
 detect_darkness/CMakeFiles/aruco_msgs_generate_messages_cpp.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/aruco_msgs_generate_messages_cpp.dir/rule
 .PHONY : detect_darkness/CMakeFiles/aruco_msgs_generate_messages_cpp.dir/rule
@@ -586,36 +1216,6 @@ aruco_msgs_generate_messages_nodejs/fast:
 .PHONY : aruco_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/rule
-
-# Convenience name for target.
-detect_darkness_generate_messages_py: detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/rule
-
-.PHONY : detect_darkness_generate_messages_py
-
-# fast build rule for target.
-detect_darkness_generate_messages_py/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_py.dir/build
-.PHONY : detect_darkness_generate_messages_py/fast
-
-# Convenience name for target.
 detect_darkness/CMakeFiles/aruco_msgs_generate_messages_py.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/aruco_msgs_generate_messages_py.dir/rule
 .PHONY : detect_darkness/CMakeFiles/aruco_msgs_generate_messages_py.dir/rule
@@ -631,79 +1231,19 @@ aruco_msgs_generate_messages_py/fast:
 .PHONY : aruco_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/rule
-.PHONY : detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/rule
+detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-aruco_msgs_generate_messages_eus: detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/rule
+naoqi_bridge_msgs_generate_messages_eus: detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_eus.dir/rule
 
-.PHONY : aruco_msgs_generate_messages_eus
+.PHONY : naoqi_bridge_msgs_generate_messages_eus
 
 # fast build rule for target.
-aruco_msgs_generate_messages_eus/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/aruco_msgs_generate_messages_eus.dir/build
-.PHONY : aruco_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/rule
-
-# Convenience name for target.
-detect_darkness_generate_messages: detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/rule
-
-.PHONY : detect_darkness_generate_messages
-
-# fast build rule for target.
-detect_darkness_generate_messages/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages.dir/build
-.PHONY : detect_darkness_generate_messages/fast
-
-# Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/rule
-
-# Convenience name for target.
-detect_darkness_gennodejs: detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/rule
-
-.PHONY : detect_darkness_gennodejs
-
-# fast build rule for target.
-detect_darkness_gennodejs/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/build.make detect_darkness/CMakeFiles/detect_darkness_gennodejs.dir/build
-.PHONY : detect_darkness_gennodejs/fast
-
-# Convenience name for target.
-detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_move_direction.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_move_direction.dir/rule
-.PHONY : detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_move_direction.dir/rule
-
-# Convenience name for target.
-_detect_darkness_generate_messages_check_deps_move_direction: detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_move_direction.dir/rule
-
-.PHONY : _detect_darkness_generate_messages_check_deps_move_direction
-
-# fast build rule for target.
-_detect_darkness_generate_messages_check_deps_move_direction/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_move_direction.dir/build.make detect_darkness/CMakeFiles/_detect_darkness_generate_messages_check_deps_move_direction.dir/build
-.PHONY : _detect_darkness_generate_messages_check_deps_move_direction/fast
-
-# Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-detect_darkness_generate_messages_cpp: detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/rule
-
-.PHONY : detect_darkness_generate_messages_cpp
-
-# fast build rule for target.
-detect_darkness_generate_messages_cpp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/build
-.PHONY : detect_darkness_generate_messages_cpp/fast
+naoqi_bridge_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_eus.dir/build
+.PHONY : naoqi_bridge_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 detect_darkness/CMakeFiles/detect_darkness_gencpp.dir/rule:
@@ -721,79 +1261,154 @@ detect_darkness_gencpp/fast:
 .PHONY : detect_darkness_gencpp/fast
 
 # Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/rule
+detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-detect_darkness_generate_messages_eus: detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/rule
+actionlib_msgs_generate_messages_lisp: detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : detect_darkness_generate_messages_eus
+.PHONY : actionlib_msgs_generate_messages_lisp
 
 # fast build rule for target.
-detect_darkness_generate_messages_eus/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_eus.dir/build
-.PHONY : detect_darkness_generate_messages_eus/fast
+actionlib_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/rule
+detect_darkness/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-detect_darkness_generate_messages_lisp: detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/rule
+actionlib_generate_messages_lisp: detect_darkness/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
-.PHONY : detect_darkness_generate_messages_lisp
+.PHONY : actionlib_generate_messages_lisp
 
 # fast build rule for target.
-detect_darkness_generate_messages_lisp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/build
-.PHONY : detect_darkness_generate_messages_lisp/fast
+actionlib_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
 
 # Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_geneus.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_geneus.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_geneus.dir/rule
+detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-detect_darkness_geneus: detect_darkness/CMakeFiles/detect_darkness_geneus.dir/rule
+actionlib_msgs_generate_messages_eus: detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
-.PHONY : detect_darkness_geneus
+.PHONY : actionlib_msgs_generate_messages_eus
 
 # fast build rule for target.
-detect_darkness_geneus/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_geneus.dir/build.make detect_darkness/CMakeFiles/detect_darkness_geneus.dir/build
-.PHONY : detect_darkness_geneus/fast
+actionlib_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+detect_darkness/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_py: detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+tf2_msgs_generate_messages_py: detect_darkness/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_py
+.PHONY : tf2_msgs_generate_messages_py
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
+tf2_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-detect_darkness/CMakeFiles/detect_darkness_genpy.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/detect_darkness_genpy.dir/rule
-.PHONY : detect_darkness/CMakeFiles/detect_darkness_genpy.dir/rule
+detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-detect_darkness_genpy: detect_darkness/CMakeFiles/detect_darkness_genpy.dir/rule
+naoqi_bridge_msgs_generate_messages_nodejs: detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : detect_darkness_genpy
+.PHONY : naoqi_bridge_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-detect_darkness_genpy/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/detect_darkness_genpy.dir/build.make detect_darkness/CMakeFiles/detect_darkness_genpy.dir/build
-.PHONY : detect_darkness_genpy/fast
+naoqi_bridge_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/build
+.PHONY : naoqi_bridge_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_nodejs: detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+.PHONY : actionlib_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_lisp: detect_darkness/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make detect_darkness/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detect_darkness/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_nodejs: detect_darkness/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make detect_darkness/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : detect_darkness/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: detect_darkness/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make detect_darkness/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 detect_darkness/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
@@ -809,6 +1424,21 @@ geometry_msgs_generate_messages_cpp: detect_darkness/CMakeFiles/geometry_msgs_ge
 geometry_msgs_generate_messages_cpp/fast:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+.PHONY : detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_cpp: detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_cpp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make detect_darkness/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+.PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 src/client.o: src/client.cpp.o
 
@@ -843,56 +1473,98 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... tf_listener"
+	@echo "... detect_darkness_gennodejs"
+	@echo "... detect_darkness_generate_messages_nodejs"
+	@echo "... detect_darkness_genlisp"
+	@echo "... detect_darkness_generate_messages_lisp"
+	@echo "... detect_darkness_geneus"
+	@echo "... detect_darkness_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... detect_darkness_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... _detect_darkness_generate_messages_check_deps_detect_process"
+	@echo "... tf_generate_messages_py"
+	@echo "... rebuild_cache"
+	@echo "... tf_generate_messages_eus"
+	@echo "... std_srvs_generate_messages_nodejs"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... std_srvs_generate_messages_eus"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_py"
+	@echo "... install/local"
+	@echo "... trajectory_msgs_generate_messages_nodejs"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... tf_broadcaster"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... install"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... naoqi_bridge_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... detect_darkness_genpy"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... list_install_components"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... naoqi_bridge_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... detect_darkness_genlisp"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... nao_moveforward"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... naoqi_bridge_msgs_generate_messages_py"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... tf_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... detect_darkness_generate_messages"
+	@echo "... aruco_msgs_generate_messages_eus"
+	@echo "... actionlib_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... aruco_msgs_generate_messages_lisp"
-	@echo "... detect_darkness_generate_messages_nodejs"
+	@echo "... install/strip"
+	@echo "... nav_msgs_generate_messages_eus"
+	@echo "... detect_darkness_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... actionlib_generate_messages_py"
 	@echo "... aruco_msgs_generate_messages_cpp"
 	@echo "... aruco_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... detect_darkness_generate_messages_py"
 	@echo "... aruco_msgs_generate_messages_py"
-	@echo "... aruco_msgs_generate_messages_eus"
-	@echo "... detect_darkness_generate_messages"
-	@echo "... detect_darkness_gennodejs"
-	@echo "... _detect_darkness_generate_messages_check_deps_move_direction"
-	@echo "... detect_darkness_generate_messages_cpp"
+	@echo "... naoqi_bridge_msgs_generate_messages_eus"
 	@echo "... detect_darkness_gencpp"
-	@echo "... detect_darkness_generate_messages_eus"
-	@echo "... detect_darkness_generate_messages_lisp"
-	@echo "... detect_darkness_geneus"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... detect_darkness_genpy"
-	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... naoqi_bridge_msgs_generate_messages_nodejs"
+	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... nav_msgs_generate_messages_py"
 	@echo "... test"
-	@echo "... install/strip"
-	@echo "... install/local"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... src/client.o"
 	@echo "... src/client.i"
 	@echo "... src/client.s"

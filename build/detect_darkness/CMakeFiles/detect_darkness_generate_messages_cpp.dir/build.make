@@ -53,18 +53,18 @@ CMAKE_BINARY_DIR = /home/yu/ros/workspace/src/build
 # Include the progress variables for this target.
 include detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/progress.make
 
-detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp: devel/include/detect_darkness/move_direction.h
+detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp: devel/include/detect_darkness/detect_process.h
 
 
-devel/include/detect_darkness/move_direction.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-devel/include/detect_darkness/move_direction.h: ../detect_darkness/srv/move_direction.srv
-devel/include/detect_darkness/move_direction.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-devel/include/detect_darkness/move_direction.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yu/ros/workspace/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from detect_darkness/move_direction.srv"
-	cd /home/yu/ros/workspace/src/detect_darkness && /home/yu/ros/workspace/src/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p detect_darkness -o /home/yu/ros/workspace/src/build/devel/include/detect_darkness -e /opt/ros/kinetic/share/gencpp/cmake/..
+devel/include/detect_darkness/detect_process.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+devel/include/detect_darkness/detect_process.h: ../detect_darkness/srv/detect_process.srv
+devel/include/detect_darkness/detect_process.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+devel/include/detect_darkness/detect_process.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yu/ros/workspace/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from detect_darkness/detect_process.srv"
+	cd /home/yu/ros/workspace/src/detect_darkness && /home/yu/ros/workspace/src/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p detect_darkness -o /home/yu/ros/workspace/src/build/devel/include/detect_darkness -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 detect_darkness_generate_messages_cpp: detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp
-detect_darkness_generate_messages_cpp: devel/include/detect_darkness/move_direction.h
+detect_darkness_generate_messages_cpp: devel/include/detect_darkness/detect_process.h
 detect_darkness_generate_messages_cpp: detect_darkness/CMakeFiles/detect_darkness_generate_messages_cpp.dir/build.make
 
 .PHONY : detect_darkness_generate_messages_cpp

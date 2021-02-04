@@ -1,0 +1,12 @@
+# Goal: walking direction
+# Result: true if robot is walking
+# Feedback: the robot stops
+
+float32 x
+float32 y
+
+---
+bool still_walking
+---
+string re
+

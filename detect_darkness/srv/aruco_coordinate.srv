@@ -1,0 +1,6 @@
+#CREATE request parameters
+string name
+
+--------------------------------
+#CREATE response parameters
+geometry_msgs/Twist pose6D

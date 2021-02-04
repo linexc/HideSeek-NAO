@@ -2,7 +2,7 @@
 
 message(STATUS "detect_darkness: 0 messages, 1 services")
 
-set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,9 +17,9 @@ add_custom_target(detect_darkness_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv" NAME_WE)
+get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv" NAME_WE)
 add_custom_target(_detect_darkness_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "detect_darkness" "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "detect_darkness" "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv" ""
 )
 
 #
@@ -31,7 +31,7 @@ add_custom_target(_detect_darkness_generate_messages_check_deps_${_filename}
 
 ### Generating Services
 _generate_srv_cpp(detect_darkness
-  "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv"
+  "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/detect_darkness
@@ -49,7 +49,7 @@ add_custom_target(detect_darkness_generate_messages_cpp
 add_dependencies(detect_darkness_generate_messages detect_darkness_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv" NAME_WE)
+get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv" NAME_WE)
 add_dependencies(detect_darkness_generate_messages_cpp _detect_darkness_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -64,7 +64,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS detect_darkness_generate_messages_c
 
 ### Generating Services
 _generate_srv_eus(detect_darkness
-  "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv"
+  "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/detect_darkness
@@ -82,7 +82,7 @@ add_custom_target(detect_darkness_generate_messages_eus
 add_dependencies(detect_darkness_generate_messages detect_darkness_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv" NAME_WE)
+get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv" NAME_WE)
 add_dependencies(detect_darkness_generate_messages_eus _detect_darkness_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -97,7 +97,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS detect_darkness_generate_messages_e
 
 ### Generating Services
 _generate_srv_lisp(detect_darkness
-  "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv"
+  "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/detect_darkness
@@ -115,7 +115,7 @@ add_custom_target(detect_darkness_generate_messages_lisp
 add_dependencies(detect_darkness_generate_messages detect_darkness_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv" NAME_WE)
+get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv" NAME_WE)
 add_dependencies(detect_darkness_generate_messages_lisp _detect_darkness_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -130,7 +130,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS detect_darkness_generate_messages_l
 
 ### Generating Services
 _generate_srv_nodejs(detect_darkness
-  "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv"
+  "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/detect_darkness
@@ -148,7 +148,7 @@ add_custom_target(detect_darkness_generate_messages_nodejs
 add_dependencies(detect_darkness_generate_messages detect_darkness_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv" NAME_WE)
+get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv" NAME_WE)
 add_dependencies(detect_darkness_generate_messages_nodejs _detect_darkness_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -163,7 +163,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS detect_darkness_generate_messages_n
 
 ### Generating Services
 _generate_srv_py(detect_darkness
-  "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv"
+  "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/detect_darkness
@@ -181,7 +181,7 @@ add_custom_target(detect_darkness_generate_messages_py
 add_dependencies(detect_darkness_generate_messages detect_darkness_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv" NAME_WE)
+get_filename_component(_filename "/home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv" NAME_WE)
 add_dependencies(detect_darkness_generate_messages_py _detect_darkness_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -203,6 +203,12 @@ endif()
 if(TARGET std_msgs_generate_messages_cpp)
   add_dependencies(detect_darkness_generate_messages_cpp std_msgs_generate_messages_cpp)
 endif()
+if(TARGET actionlib_msgs_generate_messages_cpp)
+  add_dependencies(detect_darkness_generate_messages_cpp actionlib_msgs_generate_messages_cpp)
+endif()
+if(TARGET std_msgs_generate_messages_cpp)
+  add_dependencies(detect_darkness_generate_messages_cpp std_msgs_generate_messages_cpp)
+endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/detect_darkness)
   # install generated code
@@ -210,6 +216,12 @@ if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/de
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/detect_darkness
     DESTINATION ${geneus_INSTALL_DIR}
   )
+endif()
+if(TARGET std_msgs_generate_messages_eus)
+  add_dependencies(detect_darkness_generate_messages_eus std_msgs_generate_messages_eus)
+endif()
+if(TARGET actionlib_msgs_generate_messages_eus)
+  add_dependencies(detect_darkness_generate_messages_eus actionlib_msgs_generate_messages_eus)
 endif()
 if(TARGET std_msgs_generate_messages_eus)
   add_dependencies(detect_darkness_generate_messages_eus std_msgs_generate_messages_eus)
@@ -225,6 +237,12 @@ endif()
 if(TARGET std_msgs_generate_messages_lisp)
   add_dependencies(detect_darkness_generate_messages_lisp std_msgs_generate_messages_lisp)
 endif()
+if(TARGET actionlib_msgs_generate_messages_lisp)
+  add_dependencies(detect_darkness_generate_messages_lisp actionlib_msgs_generate_messages_lisp)
+endif()
+if(TARGET std_msgs_generate_messages_lisp)
+  add_dependencies(detect_darkness_generate_messages_lisp std_msgs_generate_messages_lisp)
+endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/detect_darkness)
   # install generated code
@@ -232,6 +250,12 @@ if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_D
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/detect_darkness
     DESTINATION ${gennodejs_INSTALL_DIR}
   )
+endif()
+if(TARGET std_msgs_generate_messages_nodejs)
+  add_dependencies(detect_darkness_generate_messages_nodejs std_msgs_generate_messages_nodejs)
+endif()
+if(TARGET actionlib_msgs_generate_messages_nodejs)
+  add_dependencies(detect_darkness_generate_messages_nodejs actionlib_msgs_generate_messages_nodejs)
 endif()
 if(TARGET std_msgs_generate_messages_nodejs)
   add_dependencies(detect_darkness_generate_messages_nodejs std_msgs_generate_messages_nodejs)
@@ -244,6 +268,12 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dete
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/detect_darkness
     DESTINATION ${genpy_INSTALL_DIR}
   )
+endif()
+if(TARGET std_msgs_generate_messages_py)
+  add_dependencies(detect_darkness_generate_messages_py std_msgs_generate_messages_py)
+endif()
+if(TARGET actionlib_msgs_generate_messages_py)
+  add_dependencies(detect_darkness_generate_messages_py actionlib_msgs_generate_messages_py)
 endif()
 if(TARGET std_msgs_generate_messages_py)
   add_dependencies(detect_darkness_generate_messages_py std_msgs_generate_messages_py)

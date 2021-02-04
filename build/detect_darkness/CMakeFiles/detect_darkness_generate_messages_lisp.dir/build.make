@@ -53,16 +53,16 @@ CMAKE_BINARY_DIR = /home/yu/ros/workspace/src/build
 # Include the progress variables for this target.
 include detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/progress.make
 
-detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp: devel/share/common-lisp/ros/detect_darkness/srv/move_direction.lisp
+detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp: devel/share/common-lisp/ros/detect_darkness/srv/detect_process.lisp
 
 
-devel/share/common-lisp/ros/detect_darkness/srv/move_direction.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
-devel/share/common-lisp/ros/detect_darkness/srv/move_direction.lisp: ../detect_darkness/srv/move_direction.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yu/ros/workspace/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from detect_darkness/move_direction.srv"
-	cd /home/yu/ros/workspace/src/build/detect_darkness && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/yu/ros/workspace/src/detect_darkness/srv/move_direction.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p detect_darkness -o /home/yu/ros/workspace/src/build/devel/share/common-lisp/ros/detect_darkness/srv
+devel/share/common-lisp/ros/detect_darkness/srv/detect_process.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+devel/share/common-lisp/ros/detect_darkness/srv/detect_process.lisp: ../detect_darkness/srv/detect_process.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yu/ros/workspace/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from detect_darkness/detect_process.srv"
+	cd /home/yu/ros/workspace/src/build/detect_darkness && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/yu/ros/workspace/src/detect_darkness/srv/detect_process.srv -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p detect_darkness -o /home/yu/ros/workspace/src/build/devel/share/common-lisp/ros/detect_darkness/srv
 
 detect_darkness_generate_messages_lisp: detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp
-detect_darkness_generate_messages_lisp: devel/share/common-lisp/ros/detect_darkness/srv/move_direction.lisp
+detect_darkness_generate_messages_lisp: devel/share/common-lisp/ros/detect_darkness/srv/detect_process.lisp
 detect_darkness_generate_messages_lisp: detect_darkness/CMakeFiles/detect_darkness_generate_messages_lisp.dir/build.make
 
 .PHONY : detect_darkness_generate_messages_lisp
