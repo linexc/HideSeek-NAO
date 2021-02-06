@@ -2,11 +2,13 @@ cmake_minimum_required(VERSION 2.8.3)
 project(detect_darkness)
 
 add_compile_options(-std=c++11)
-
+## Find catkin macros and libraries
+## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
+## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  std_msgs
   rospy
+  std_msgs
   message_generation
   sensor_msgs
   cv_bridge
@@ -21,23 +23,28 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 find_package(Boost REQUIRED COMPONENTS system thread)
-
+find_package(Eigen3 REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(aruco REQUIRED )
 
+add_definitions(${EIGEN_DEFINATIONS})
+
+## Generate services in the 'srv' folder
 add_service_files(
     DIRECTORY srv
     FILES
     detect_process.srv
-)
+    aruco_coordinate.srv
+ )
 
-find_package(Eigen3 REQUIRED)
-add_definitions(${EIGEN_DEFINATIONS})
+## Generate added messages and services with any dependencies listed here
 generate_messages(
-    DEPENDENCIES 
-    std_msgs
-    actionlib_msgs
-    std_msgs
-    )
+   DEPENDENCIES 
+   std_msgs
+   actionlib_msgs
+   std_msgs
+   geometry_msgs
+ )
 
 
 ###########
@@ -46,19 +53,25 @@ generate_messages(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
+catkin_package(
+  INCLUDE_DIRS include
+#  LIBRARIES detect_darkness
+#  CATKIN_DEPENDS roscpp rospy std_msgs
+#  DEPENDS system_lib
+  LIBRARIES aruco_ros_utils
+  CATKIN_DEPENDS aruco sensor_msgs tf
+    message_runtime 
+    actionlib_msgs
+ 
+)
+
 include_directories(
+# include
   ${catkin_INCLUDE_DIRS}
+  ${Boost_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIR}
-  ${Boost_INCLUDE_DIRS}
 )
-
-catkin_package(CATKIN_DEPENDS message_runtime actionlib_msgs) 
-
-include_directories(
-  ${catkin_INCLUDE_DIRS}
-)
-#catkin_install_python
 
 install(PROGRAMS 
     scripts/move_service.py
@@ -72,8 +85,10 @@ target_link_libraries(nao_moveforward
 ${catkin_LIBRARIES}
 ${OpenCV_LIBRARIES}
 ${Boost_LIBRARIES}
+${aruco_LIBS}
 )
+
+add_dependencies(nao_moveforward detect_darkness_generate_messages_cpp)
 target_link_libraries(tf_broadcaster ${catkin_LIBRARIES})
 target_link_libraries(tf_listener ${catkin_LIBRARIES})
 
-add_dependencies(nao_moveforward ${nao_moveforward_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})

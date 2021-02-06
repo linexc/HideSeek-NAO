@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/yu/ros/workspace/src/walk/build/devel/setup.sh

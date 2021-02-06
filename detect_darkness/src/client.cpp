@@ -38,6 +38,7 @@
 #include <aruco/aruco.h>
 #include <image_transport/image_transport.h>
 
+#include "detect_darkness/aruco_coordinate.h"
 #include "detect_darkness/detect_process.h"
 
 #include <vector>

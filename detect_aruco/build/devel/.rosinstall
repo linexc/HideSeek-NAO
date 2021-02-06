@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/yu/ros/workspace/src/detect_aruco/build/devel/setup.sh

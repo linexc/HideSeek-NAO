@@ -1,0 +1,8 @@
+prefix=/home/yu/ros/workspace/src/walk/build/devel
+
+Name: walk
+Description: Description of walk
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

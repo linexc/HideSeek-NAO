@@ -6,7 +6,9 @@ import rospy
 from apriltag_ros.msg import AprilTagDetectionArray
 from geometry_msgs.msg import Pose2D
 from rospy.numpy_msg import numpy_msg
+
 from rospy_tutorials.msg import Floats
+
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
 
