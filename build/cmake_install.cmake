@@ -127,8 +127,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/yu/ros/workspace/src/build/gtest/cmake_install.cmake")
   include("/home/yu/ros/workspace/src/build/sound_loc/cmake_install.cmake")
-  include("/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros_msgs/cmake_install.cmake")
-  include("/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros/cmake_install.cmake")
   include("/home/yu/ros/workspace/src/build/detector/cmake_install.cmake")
   include("/home/yu/ros/workspace/src/build/detect_aruco/cmake_install.cmake")
   include("/home/yu/ros/workspace/src/build/detect_walk/cmake_install.cmake")

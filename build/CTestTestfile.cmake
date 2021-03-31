@@ -6,8 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
 subdirs(sound_loc)
-subdirs(darknet_ros/darknet_ros_msgs)
-subdirs(darknet_ros/darknet_ros)
 subdirs(detector)
 subdirs(detect_aruco)
 subdirs(detect_walk)

@@ -88,16 +88,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -110,6 +111,17 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -120,18 +132,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,169 +166,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-detector/CMakeFiles/detector_generate_messages_py.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_generate_messages_py.dir/rule
-.PHONY : detector/CMakeFiles/detector_generate_messages_py.dir/rule
+detector/CMakeFiles/detector_genpy.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_genpy.dir/rule
+.PHONY : detector/CMakeFiles/detector_genpy.dir/rule
 
 # Convenience name for target.
-detector_generate_messages_py: detector/CMakeFiles/detector_generate_messages_py.dir/rule
+detector_genpy: detector/CMakeFiles/detector_genpy.dir/rule
 
-.PHONY : detector_generate_messages_py
+.PHONY : detector_genpy
 
 # fast build rule for target.
-detector_generate_messages_py/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_generate_messages_py.dir/build.make detector/CMakeFiles/detector_generate_messages_py.dir/build
-.PHONY : detector_generate_messages_py/fast
+detector_genpy/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_genpy.dir/build.make detector/CMakeFiles/detector_genpy.dir/build
+.PHONY : detector_genpy/fast
 
 # Convenience name for target.
-detector/CMakeFiles/detector_genlisp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_genlisp.dir/rule
-.PHONY : detector/CMakeFiles/detector_genlisp.dir/rule
+detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-detector_genlisp: detector/CMakeFiles/detector_genlisp.dir/rule
+nav_msgs_generate_messages_cpp: detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : detector_genlisp
+.PHONY : nav_msgs_generate_messages_cpp
 
 # fast build rule for target.
-detector_genlisp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_genlisp.dir/build.make detector/CMakeFiles/detector_genlisp.dir/build
-.PHONY : detector_genlisp/fast
-
-# Convenience name for target.
-detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-detector/CMakeFiles/detector_generate_messages_cpp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_generate_messages_cpp.dir/rule
-.PHONY : detector/CMakeFiles/detector_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-detector_generate_messages_cpp: detector/CMakeFiles/detector_generate_messages_cpp.dir/rule
-
-.PHONY : detector_generate_messages_cpp
-
-# fast build rule for target.
-detector_generate_messages_cpp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_generate_messages_cpp.dir/build.make detector/CMakeFiles/detector_generate_messages_cpp.dir/build
-.PHONY : detector_generate_messages_cpp/fast
-
-# Convenience name for target.
-detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-.PHONY : detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_eus: detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-.PHONY : nav_msgs_generate_messages_eus
-
-# fast build rule for target.
-nav_msgs_generate_messages_eus/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-.PHONY : nav_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-.PHONY : detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_eus: detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_eus
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_eus/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
-.PHONY : trajectory_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-detector/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : detector/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_py: detector/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-.PHONY : nav_msgs_generate_messages_py
-
-# fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-detector/CMakeFiles/detector_generate_messages_nodejs.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_generate_messages_nodejs.dir/rule
-.PHONY : detector/CMakeFiles/detector_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-detector_generate_messages_nodejs: detector/CMakeFiles/detector_generate_messages_nodejs.dir/rule
-
-.PHONY : detector_generate_messages_nodejs
-
-# fast build rule for target.
-detector_generate_messages_nodejs/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_generate_messages_nodejs.dir/build.make detector/CMakeFiles/detector_generate_messages_nodejs.dir/build
-.PHONY : detector_generate_messages_nodejs/fast
-
-# Convenience name for target.
-detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule
-.PHONY : detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-naoqi_bridge_msgs_generate_messages_lisp: detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : naoqi_bridge_msgs_generate_messages_lisp
-
-# fast build rule for target.
-naoqi_bridge_msgs_generate_messages_lisp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/build.make detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/build
-.PHONY : naoqi_bridge_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule
-.PHONY : detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-naoqi_bridge_msgs_generate_messages_py: detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule
-
-.PHONY : naoqi_bridge_msgs_generate_messages_py
-
-# fast build rule for target.
-naoqi_bridge_msgs_generate_messages_py/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/build
-.PHONY : naoqi_bridge_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule
-.PHONY : detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-naoqi_bridge_msgs_generate_messages_cpp: detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : naoqi_bridge_msgs_generate_messages_cpp
-
-# fast build rule for target.
-naoqi_bridge_msgs_generate_messages_cpp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/build
-.PHONY : naoqi_bridge_msgs_generate_messages_cpp/fast
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_eus.dir/rule:
@@ -346,64 +211,34 @@ naoqi_bridge_msgs_generate_messages_eus/fast:
 .PHONY : naoqi_bridge_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule
-.PHONY : detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule
+detector/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : detector/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-naoqi_bridge_msgs_generate_messages_nodejs: detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule
+actionlib_msgs_generate_messages_py: detector/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
-.PHONY : naoqi_bridge_msgs_generate_messages_nodejs
+.PHONY : actionlib_msgs_generate_messages_py
 
 # fast build rule for target.
-naoqi_bridge_msgs_generate_messages_nodejs/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/build
-.PHONY : naoqi_bridge_msgs_generate_messages_nodejs/fast
+actionlib_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-detector/CMakeFiles/detector_genpy.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_genpy.dir/rule
-.PHONY : detector/CMakeFiles/detector_genpy.dir/rule
+detector/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/rule
+.PHONY : detector/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-detector_genpy: detector/CMakeFiles/detector_genpy.dir/rule
+darknet_ros_msgs_generate_messages_py: detector/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/rule
 
-.PHONY : detector_genpy
+.PHONY : darknet_ros_msgs_generate_messages_py
 
 # fast build rule for target.
-detector_genpy/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_genpy.dir/build.make detector/CMakeFiles/detector_genpy.dir/build
-.PHONY : detector_genpy/fast
-
-# Convenience name for target.
-detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-.PHONY : detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_cpp: detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_cpp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_cpp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
-.PHONY : trajectory_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-detector/CMakeFiles/detector_generate_messages.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_generate_messages.dir/rule
-.PHONY : detector/CMakeFiles/detector_generate_messages.dir/rule
-
-# Convenience name for target.
-detector_generate_messages: detector/CMakeFiles/detector_generate_messages.dir/rule
-
-.PHONY : detector_generate_messages
-
-# fast build rule for target.
-detector_generate_messages/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_generate_messages.dir/build.make detector/CMakeFiles/detector_generate_messages.dir/build
-.PHONY : detector_generate_messages/fast
+darknet_ros_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/build
+.PHONY : darknet_ros_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 detector/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
@@ -421,19 +256,64 @@ trajectory_msgs_generate_messages_lisp/fast:
 .PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
-.PHONY : detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+detector/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : detector/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_nodejs: detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+geometry_msgs_generate_messages_eus: detector/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
-.PHONY : trajectory_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_eus
 
 # fast build rule for target.
-trajectory_msgs_generate_messages_nodejs/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
-.PHONY : trajectory_msgs_generate_messages_nodejs/fast
+geometry_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make detector/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+detector/CMakeFiles/detector_generate_messages.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_generate_messages.dir/rule
+.PHONY : detector/CMakeFiles/detector_generate_messages.dir/rule
+
+# Convenience name for target.
+detector_generate_messages: detector/CMakeFiles/detector_generate_messages.dir/rule
+
+.PHONY : detector_generate_messages
+
+# fast build rule for target.
+detector_generate_messages/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_generate_messages.dir/build.make detector/CMakeFiles/detector_generate_messages.dir/build
+.PHONY : detector_generate_messages/fast
+
+# Convenience name for target.
+detector/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/rule
+.PHONY : detector/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+darknet_ros_msgs_generate_messages_eus: detector/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/rule
+
+.PHONY : darknet_ros_msgs_generate_messages_eus
+
+# fast build rule for target.
+darknet_ros_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/build.make detector/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/build
+.PHONY : darknet_ros_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+.PHONY : detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_py: detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_py
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+.PHONY : trajectory_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 detector/CMakeFiles/detector_gennodejs.dir/rule:
@@ -451,19 +331,319 @@ detector_gennodejs/fast:
 .PHONY : detector_gennodejs/fast
 
 # Convenience name for target.
-detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
-.PHONY : detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+detector/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detector/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-trajectory_msgs_generate_messages_py: detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+sensor_msgs_generate_messages_nodejs: detector/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : trajectory_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-trajectory_msgs_generate_messages_py/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
-.PHONY : trajectory_msgs_generate_messages_py/fast
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule
+.PHONY : detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+naoqi_bridge_msgs_generate_messages_cpp: detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : naoqi_bridge_msgs_generate_messages_cpp
+
+# fast build rule for target.
+naoqi_bridge_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_cpp.dir/build
+.PHONY : naoqi_bridge_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/rule
+.PHONY : detector/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+darknet_ros_msgs_generate_messages_lisp: detector/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : darknet_ros_msgs_generate_messages_lisp
+
+# fast build rule for target.
+darknet_ros_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/build.make detector/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/build
+.PHONY : darknet_ros_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : detector/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: detector/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make detector/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : detector/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: detector/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+detector/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/rule
+.PHONY : detector/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+darknet_ros_msgs_generate_messages_cpp: detector/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : darknet_ros_msgs_generate_messages_cpp
+
+# fast build rule for target.
+darknet_ros_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/build
+.PHONY : darknet_ros_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : detector/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: detector/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : detector/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_cpp: detector/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : detector/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: detector/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make detector/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule
+.PHONY : detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+naoqi_bridge_msgs_generate_messages_py: detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/rule
+
+.PHONY : naoqi_bridge_msgs_generate_messages_py
+
+# fast build rule for target.
+naoqi_bridge_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_py.dir/build
+.PHONY : naoqi_bridge_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+naoqi_bridge_msgs_generate_messages_nodejs: detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : naoqi_bridge_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+naoqi_bridge_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_nodejs.dir/build
+.PHONY : naoqi_bridge_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detector/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detector/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_nodejs: detector/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+.PHONY : actionlib_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detector/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : detector/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: detector/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+detector/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+.PHONY : detector/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_eus: detector/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_eus
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make detector/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+detector/CMakeFiles/detector_geneus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_geneus.dir/rule
+.PHONY : detector/CMakeFiles/detector_geneus.dir/rule
+
+# Convenience name for target.
+detector_geneus: detector/CMakeFiles/detector_geneus.dir/rule
+
+.PHONY : detector_geneus
+
+# fast build rule for target.
+detector_geneus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_geneus.dir/build.make detector/CMakeFiles/detector_geneus.dir/build
+.PHONY : detector_geneus/fast
+
+# Convenience name for target.
+detector/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detector/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+darknet_ros_msgs_generate_messages_nodejs: detector/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : darknet_ros_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+darknet_ros_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/build
+.PHONY : darknet_ros_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detector/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : detector/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: detector/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make detector/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detector/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: detector/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule
+.PHONY : detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+naoqi_bridge_msgs_generate_messages_lisp: detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : naoqi_bridge_msgs_generate_messages_lisp
+
+# fast build rule for target.
+naoqi_bridge_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/build.make detector/CMakeFiles/naoqi_bridge_msgs_generate_messages_lisp.dir/build
+.PHONY : naoqi_bridge_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/detector_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_generate_messages_nodejs.dir/rule
+.PHONY : detector/CMakeFiles/detector_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+detector_generate_messages_nodejs: detector/CMakeFiles/detector_generate_messages_nodejs.dir/rule
+
+.PHONY : detector_generate_messages_nodejs
+
+# fast build rule for target.
+detector_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_generate_messages_nodejs.dir/build.make detector/CMakeFiles/detector_generate_messages_nodejs.dir/build
+.PHONY : detector_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+.PHONY : detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_eus: detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+.PHONY : nav_msgs_generate_messages_eus
+
+# fast build rule for target.
+nav_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make detector/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+.PHONY : nav_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 detector/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
@@ -496,36 +676,6 @@ _detector_generate_messages_check_deps_walkdirection/fast:
 .PHONY : _detector_generate_messages_check_deps_walkdirection/fast
 
 # Convenience name for target.
-detector/CMakeFiles/detector_gencpp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_gencpp.dir/rule
-.PHONY : detector/CMakeFiles/detector_gencpp.dir/rule
-
-# Convenience name for target.
-detector_gencpp: detector/CMakeFiles/detector_gencpp.dir/rule
-
-.PHONY : detector_gencpp
-
-# fast build rule for target.
-detector_gencpp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_gencpp.dir/build.make detector/CMakeFiles/detector_gencpp.dir/build
-.PHONY : detector_gencpp/fast
-
-# Convenience name for target.
-detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 detector/CMakeFiles/detector_generate_messages_eus.dir/rule:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_generate_messages_eus.dir/rule
 .PHONY : detector/CMakeFiles/detector_generate_messages_eus.dir/rule
@@ -539,6 +689,126 @@ detector_generate_messages_eus: detector/CMakeFiles/detector_generate_messages_e
 detector_generate_messages_eus/fast:
 	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_generate_messages_eus.dir/build.make detector/CMakeFiles/detector_generate_messages_eus.dir/build
 .PHONY : detector_generate_messages_eus/fast
+
+# Convenience name for target.
+detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_nodejs: detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detector/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : detector/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: detector/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make detector/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+detector/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : detector/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: detector/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+.PHONY : detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_cpp: detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_cpp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make detector/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+.PHONY : trajectory_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+.PHONY : detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_eus: detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_eus
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_eus/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make detector/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+.PHONY : trajectory_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+.PHONY : detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_nodejs: detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_nodejs/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make detector/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+.PHONY : trajectory_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+detector/CMakeFiles/detector_generate_messages_cpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_generate_messages_cpp.dir/rule
+.PHONY : detector/CMakeFiles/detector_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+detector_generate_messages_cpp: detector/CMakeFiles/detector_generate_messages_cpp.dir/rule
+
+.PHONY : detector_generate_messages_cpp
+
+# fast build rule for target.
+detector_generate_messages_cpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_generate_messages_cpp.dir/build.make detector/CMakeFiles/detector_generate_messages_cpp.dir/build
+.PHONY : detector_generate_messages_cpp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/detector_gencpp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_gencpp.dir/rule
+.PHONY : detector/CMakeFiles/detector_gencpp.dir/rule
+
+# Convenience name for target.
+detector_gencpp: detector/CMakeFiles/detector_gencpp.dir/rule
+
+.PHONY : detector_gencpp
+
+# fast build rule for target.
+detector_gencpp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_gencpp.dir/build.make detector/CMakeFiles/detector_gencpp.dir/build
+.PHONY : detector_gencpp/fast
 
 # Convenience name for target.
 detector/CMakeFiles/detector_generate_messages_lisp.dir/rule:
@@ -556,19 +826,49 @@ detector_generate_messages_lisp/fast:
 .PHONY : detector_generate_messages_lisp/fast
 
 # Convenience name for target.
-detector/CMakeFiles/detector_geneus.dir/rule:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_geneus.dir/rule
-.PHONY : detector/CMakeFiles/detector_geneus.dir/rule
+detector/CMakeFiles/detector_genlisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_genlisp.dir/rule
+.PHONY : detector/CMakeFiles/detector_genlisp.dir/rule
 
 # Convenience name for target.
-detector_geneus: detector/CMakeFiles/detector_geneus.dir/rule
+detector_genlisp: detector/CMakeFiles/detector_genlisp.dir/rule
 
-.PHONY : detector_geneus
+.PHONY : detector_genlisp
 
 # fast build rule for target.
-detector_geneus/fast:
-	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_geneus.dir/build.make detector/CMakeFiles/detector_geneus.dir/build
-.PHONY : detector_geneus/fast
+detector_genlisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_genlisp.dir/build.make detector/CMakeFiles/detector_genlisp.dir/build
+.PHONY : detector_genlisp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : detector/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_lisp: detector/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make detector/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+detector/CMakeFiles/detector_generate_messages_py.dir/rule:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f CMakeFiles/Makefile2 detector/CMakeFiles/detector_generate_messages_py.dir/rule
+.PHONY : detector/CMakeFiles/detector_generate_messages_py.dir/rule
+
+# Convenience name for target.
+detector_generate_messages_py: detector/CMakeFiles/detector_generate_messages_py.dir/rule
+
+.PHONY : detector_generate_messages_py
+
+# fast build rule for target.
+detector_generate_messages_py/fast:
+	cd /home/yu/ros/workspace/src/build && $(MAKE) -f detector/CMakeFiles/detector_generate_messages_py.dir/build.make detector/CMakeFiles/detector_generate_messages_py.dir/build
+.PHONY : detector_generate_messages_py/fast
 
 # Help Target
 help:
@@ -579,37 +879,57 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... install/strip"
-	@echo "... detector_generate_messages_py"
-	@echo "... detector_genlisp"
-	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... detector_generate_messages_cpp"
-	@echo "... nav_msgs_generate_messages_eus"
-	@echo "... trajectory_msgs_generate_messages_eus"
-	@echo "... install/local"
-	@echo "... nav_msgs_generate_messages_py"
-	@echo "... detector_generate_messages_nodejs"
-	@echo "... naoqi_bridge_msgs_generate_messages_lisp"
-	@echo "... naoqi_bridge_msgs_generate_messages_py"
-	@echo "... naoqi_bridge_msgs_generate_messages_cpp"
-	@echo "... naoqi_bridge_msgs_generate_messages_eus"
-	@echo "... naoqi_bridge_msgs_generate_messages_nodejs"
 	@echo "... detector_genpy"
-	@echo "... trajectory_msgs_generate_messages_cpp"
-	@echo "... detector_generate_messages"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... naoqi_bridge_msgs_generate_messages_eus"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... darknet_ros_msgs_generate_messages_py"
 	@echo "... trajectory_msgs_generate_messages_lisp"
-	@echo "... trajectory_msgs_generate_messages_nodejs"
-	@echo "... detector_gennodejs"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... detector_generate_messages"
+	@echo "... darknet_ros_msgs_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... install"
+	@echo "... detector_gennodejs"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... naoqi_bridge_msgs_generate_messages_cpp"
+	@echo "... darknet_ros_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... darknet_ros_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... naoqi_bridge_msgs_generate_messages_py"
+	@echo "... naoqi_bridge_msgs_generate_messages_nodejs"
+	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... detector_geneus"
+	@echo "... darknet_ros_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... naoqi_bridge_msgs_generate_messages_lisp"
+	@echo "... detector_generate_messages_nodejs"
+	@echo "... install/strip"
+	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... _detector_generate_messages_check_deps_walkdirection"
-	@echo "... detector_gencpp"
-	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... detector_generate_messages_eus"
+	@echo "... nav_msgs_generate_messages_nodejs"
+	@echo "... nav_msgs_generate_messages_py"
+	@echo "... test"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_eus"
+	@echo "... install/local"
+	@echo "... trajectory_msgs_generate_messages_nodejs"
+	@echo "... detector_generate_messages_cpp"
+	@echo "... detector_gencpp"
 	@echo "... detector_generate_messages_lisp"
-	@echo "... detector_geneus"
+	@echo "... detector_genlisp"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... detector_generate_messages_py"
 .PHONY : help
 
 
