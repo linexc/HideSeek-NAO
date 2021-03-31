@@ -1,0 +1,392 @@
+[
+{
+  "directory": "/home/yu/ros/workspace/src/build/gtest",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_EXPORTS -I/usr/src/gmock/include -I/usr/src/gmock -I/usr/src/gtest/include -I/usr/src/gtest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o -c /usr/src/gtest/src/gtest-all.cc",
+  "file": "/usr/src/gtest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/gtest",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_EXPORTS -I/usr/src/gmock/include -I/usr/src/gmock -I/usr/src/gtest/include -I/usr/src/gtest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /usr/src/gmock/src/gmock-all.cc",
+  "file": "/usr/src/gmock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/gtest",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_main_EXPORTS -I/usr/src/gmock/include -I/usr/src/gmock -I/usr/src/gtest/include -I/usr/src/gtest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/usr/src/gtest/src/gtest-all.cc.o -c /usr/src/gtest/src/gtest-all.cc",
+  "file": "/usr/src/gtest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/gtest",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_main_EXPORTS -I/usr/src/gmock/include -I/usr/src/gmock -I/usr/src/gtest/include -I/usr/src/gtest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock-all.cc.o -c /usr/src/gmock/src/gmock-all.cc",
+  "file": "/usr/src/gmock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/gtest",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgmock_main_EXPORTS -I/usr/src/gmock/include -I/usr/src/gmock -I/usr/src/gtest/include -I/usr/src/gtest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /usr/src/gmock/src/gmock_main.cc",
+  "file": "/usr/src/gmock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/gtest/gtest",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgtest_EXPORTS -I/usr/src/gtest/include -I/usr/src/gtest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /usr/src/gtest/src/gtest-all.cc",
+  "file": "/usr/src/gtest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/gtest/gtest",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgtest_main_EXPORTS -I/usr/src/gtest/include -I/usr/src/gtest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /usr/src/gtest/src/gtest_main.cc",
+  "file": "/usr/src/gtest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_nodelet_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_nodelet.dir/src/yolo_object_detector_nodelet.cpp.o -c /home/yu/ros/workspace/src/darknet_ros/darknet_ros/src/yolo_object_detector_nodelet.cpp",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet_ros/src/yolo_object_detector_nodelet.cpp"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/src/YoloObjectDetector.cpp.o -c /home/yu/ros/workspace/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/src/image_interface.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet_ros/src/image_interface.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet_ros/src/image_interface.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/activation_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/activation_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/activation_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/im2col.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/im2col.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/im2col.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/activations.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/activations.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/activations.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/image.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/image.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/image.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/avgpool_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/avgpool_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/avgpool_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/batchnorm_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/batchnorm_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/batchnorm_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/list.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/list.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/list.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/blas.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/blas.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/blas.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/local_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/local_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/local_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/box.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/box.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/box.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/lstm_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/lstm_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/lstm_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/col2im.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/col2im.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/col2im.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/matrix.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/matrix.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/matrix.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/connected_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/connected_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/connected_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/maxpool_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/maxpool_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/maxpool_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/convolutional_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/convolutional_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/convolutional_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/network.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/network.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/network.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/cost_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/cost_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/cost_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/normalization_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/normalization_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/normalization_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/crnn_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/crnn_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/crnn_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/option_list.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/option_list.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/option_list.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/crop_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/crop_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/crop_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/parser.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/parser.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/parser.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/cuda.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/cuda.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/cuda.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/region_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/region_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/region_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/data.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/data.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/data.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/reorg_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/reorg_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/reorg_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/deconvolutional_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/deconvolutional_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/deconvolutional_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/rnn_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/rnn_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/rnn_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/demo.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/demo.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/demo.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/route_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/route_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/route_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/detection_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/detection_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/detection_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/shortcut_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/shortcut_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/shortcut_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/dropout_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/dropout_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/dropout_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/softmax_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/softmax_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/softmax_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/gemm.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/gemm.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/gemm.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/tree.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/tree.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/tree.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/gru_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/gru_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/gru_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/utils.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/utils.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/utils.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/upsample_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/upsample_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/upsample_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/logistic_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/logistic_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/logistic_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/l2norm_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/l2norm_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/l2norm_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/src/yolo_layer.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/src/yolo_layer.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/src/yolo_layer.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/art.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/art.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/art.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/lsd.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/lsd.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/lsd.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/attention.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/attention.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/attention.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/nightmare.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/nightmare.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/nightmare.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/captcha.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/captcha.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/captcha.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/regressor.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/regressor.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/regressor.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/cifar.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/cifar.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/cifar.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/rnn.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/rnn.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/rnn.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/classifier.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/classifier.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/classifier.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/segmenter.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/segmenter.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/segmenter.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/coco.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/coco.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/coco.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/super.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/super.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/super.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/darknet.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/darknet.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/darknet.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/tag.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/tag.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/tag.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/detector.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/detector.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/detector.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/yolo.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/yolo.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/yolo.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-5  -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -Ddarknet_ros_lib_EXPORTS -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -Wall -Wno-unused-result -Wno-unknown-pragmas -Wno-unused-variable -Wfatal-errors -fPIC  -g -fPIC   -O4 -g -o CMakeFiles/darknet_ros_lib.dir/__/darknet/examples/go.c.o   -c /home/yu/ros/workspace/src/darknet_ros/darknet/examples/go.c",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet/examples/go.c"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -g   -O4 -g -o CMakeFiles/darknet_ros.dir/src/yolo_object_detector_node.cpp.o -c /home/yu/ros/workspace/src/darknet_ros/darknet_ros/src/yolo_object_detector_node.cpp",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet_ros/src/yolo_object_detector_node.cpp"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -g   -O4 -g -o CMakeFiles/darknet_ros_object_detection-test.dir/test/test_main.cpp.o -c /home/yu/ros/workspace/src/darknet_ros/darknet_ros/test/test_main.cpp",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet_ros/test/test_main.cpp"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/darknet_ros/darknet_ros",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DDARKNET_FILE_PATH=\\\"/home/yu/ros/workspace/src/darknet_ros/darknet\\\" -DOPENCV -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"darknet_ros\\\" -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/yu/ros/workspace/src/darknet_ros/darknet/src -I/home/yu/ros/workspace/src/darknet_ros/darknet/include -I/home/yu/ros/workspace/src/darknet_ros/darknet_ros/include -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -g   -O4 -g -o CMakeFiles/darknet_ros_object_detection-test.dir/test/ObjectDetection.cpp.o -c /home/yu/ros/workspace/src/darknet_ros/darknet_ros/test/ObjectDetection.cpp",
+  "file": "/home/yu/ros/workspace/src/darknet_ros/darknet_ros/test/ObjectDetection.cpp"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/detect_aruco",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"detect_aruco\\\" -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/include/eigen3  -g   -std=c++11 -o CMakeFiles/draw.dir/scripts/drawRoute.cpp.o -c /home/yu/ros/workspace/src/detect_aruco/scripts/drawRoute.cpp",
+  "file": "/home/yu/ros/workspace/src/detect_aruco/scripts/drawRoute.cpp"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/detect_aruco",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"detect_aruco\\\" -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/include/eigen3  -g   -std=c++11 -o CMakeFiles/yu_aruco.dir/src/aruco_finder.cpp.o -c /home/yu/ros/workspace/src/detect_aruco/src/aruco_finder.cpp",
+  "file": "/home/yu/ros/workspace/src/detect_aruco/src/aruco_finder.cpp"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/detect_aruco",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"detect_aruco\\\" -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/include/eigen3  -g   -std=c++11 -o CMakeFiles/robotpose.dir/scripts/tf_broadcaster.cpp.o -c /home/yu/ros/workspace/src/detect_aruco/scripts/tf_broadcaster.cpp",
+  "file": "/home/yu/ros/workspace/src/detect_aruco/scripts/tf_broadcaster.cpp"
+},
+{
+  "directory": "/home/yu/ros/workspace/src/build/detect_walk",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"detect_walk\\\" -I/home/yu/ros/workspace/src/build/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/include/eigen3  -g   -o CMakeFiles/mu_detect.dir/src/detect_dark.cpp.o -c /home/yu/ros/workspace/src/detect_walk/src/detect_dark.cpp",
+  "file": "/home/yu/ros/workspace/src/detect_walk/src/detect_dark.cpp"
+}
+]

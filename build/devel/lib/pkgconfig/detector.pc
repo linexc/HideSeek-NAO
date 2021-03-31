@@ -1,0 +1,8 @@
+prefix=/home/yu/ros/workspace/src/build/devel
+
+Name: detector
+Description: Description of detector
+Version: 0.0.0
+Cflags: -I/home/yu/ros/workspace/src/build/devel/include -I/home/yu/ros/workspace/src/detector/include
+Libs: -L${prefix}/lib -ldetector
+Requires: roscpp rospy std_msgs sensor_msgs
