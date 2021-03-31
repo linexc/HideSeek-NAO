@@ -1,0 +1,21 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/yu/ros/workspace/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/yu/ros/workspace/src/apriltag_ros/apriltag_ros/include/**",
+        "/home/yu/ros/workspace/src/detect_aruco/include/**",
+        "/home/yu/ros/workspace/src/detect_walk/include/**",
+        "/home/yu/ros/workspace/src/localization/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

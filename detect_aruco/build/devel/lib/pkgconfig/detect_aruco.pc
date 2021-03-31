@@ -3,6 +3,6 @@ prefix=/home/yu/ros/workspace/src/detect_aruco/build/devel
 Name: detect_aruco
 Description: Description of detect_aruco
 Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
+Cflags: -I/home/yu/ros/workspace/src/detect_aruco/build/devel/include -I/home/yu/ros/workspace/src/detect_aruco/include
+Libs: -L${prefix}/lib -laruco_ros_utils
+Requires: aruco sensor_msgs tf roscpp rospy std_msgs message_runtime

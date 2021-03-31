@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: sound_loc
+Description: Description of sound_loc
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

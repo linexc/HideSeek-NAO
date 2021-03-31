@@ -1,0 +1,8 @@
+int32[] ar_id
+geometry_msgs/Twist[] geoInfo
+-----------------------
+
+float64 naox
+float64 naoy
+float64 naotheta
+

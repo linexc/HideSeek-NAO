@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/yu/ros/workspace/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/yu/ros/workspace/src/detect_aruco/include/**",
+        "/home/yu/ros/workspace/src/usb_cam/include/**",
+        "/home/yu/ros/workspace/src/walk/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

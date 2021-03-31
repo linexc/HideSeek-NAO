@@ -1,0 +1,13 @@
+The detect_aruco package is aiming at localization through different aruco markers and finding the path to the destination through A star path planner. 
+
+For starting the package. Please at first roslaunch detect_aruco detect_aruco.launch in order to activate the localization server. 
+
+And then rossrun tf_broadcaster.cpp for displaying the aruco info in the rviz. 
+
+The server for calculating the transformation matrix from arucomarker to the nao frame is activitated through rosrun getTransformMatrix.
+
+If the destinate need to be drawn, the server drawRoute.cpp need to be active, too. The serer is initially designed for drawing path which is calculated through A* path planner. 
+
+For publishing the aruco information including the its rvec and tvec, as well as its location regarding to the nao, please rosrun the yu_dect which activates the aruco_finder.cpp
+
+For the A* planner, the python file a_star.py should be rosrun. And its server walk_general.py in the package detect_walk  for moving should be active. 

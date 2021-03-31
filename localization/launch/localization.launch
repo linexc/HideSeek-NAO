@@ -1,4 +1,0 @@
-<launch>
-    <!-- launch apriltag_detection_node -->
-            <node pkg="localization" type="EKF_SLAM_Node.py" name="EKF_SLAM_Node" output="screen"/>
-</launch>

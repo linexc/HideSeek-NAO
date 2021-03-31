@@ -1,0 +1,7 @@
+# this service is aming at moving the robot through A* planner and its own coordinate
+
+float64 x
+float64 y
+float64 theta
+---------------
+bool res

@@ -1,0 +1,1 @@
+bool if_squat

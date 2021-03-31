@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: detect_walk
+Description: Description of detect_walk
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime sensor_msgs tf roscpp rospy std_msgs

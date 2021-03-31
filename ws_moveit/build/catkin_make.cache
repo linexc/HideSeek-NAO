@@ -1,2 +1,0 @@
-moveit_tutorials:panda_moveit_config
--DCATKIN_DEVEL_PREFIX=/home/yu/ros/workspace/src/ws_moveit/devel -DCMAKE_INSTALL_PREFIX=/home/yu/ros/workspace/src/ws_moveit/install -G Unix Makefiles

@@ -1,0 +1,5 @@
+
+bool next_step
+---
+# if should move, then return 1, otherwise return 0
+int32 if_move

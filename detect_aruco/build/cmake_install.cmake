@@ -124,7 +124,53 @@ file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/yu/ros/workspace/sr
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/detect_aruco/msg" TYPE FILE FILES "/home/yu/ros/workspace/src/detect_aruco/msg/arucomsgs.msg")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/detect_aruco/srv" TYPE FILE FILES
+    "/home/yu/ros/workspace/src/detect_aruco/srv/dest.srv"
+    "/home/yu/ros/workspace/src/detect_aruco/srv/obstacleDetect.srv"
+    "/home/yu/ros/workspace/src/detect_aruco/srv/walk_polar.srv"
+    "/home/yu/ros/workspace/src/detect_aruco/srv/localization.srv"
+    "/home/yu/ros/workspace/src/detect_aruco/srv/destination.srv"
+    )
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/detect_aruco/cmake" TYPE FILE FILES "/home/yu/ros/workspace/src/detect_aruco/build/catkin_generated/installspace/detect_aruco-msg-paths.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/yu/ros/workspace/src/detect_aruco/build/devel/include/detect_aruco")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/yu/ros/workspace/src/detect_aruco/build/devel/share/roseus/ros/detect_aruco")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/yu/ros/workspace/src/detect_aruco/build/devel/share/common-lisp/ros/detect_aruco")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/yu/ros/workspace/src/detect_aruco/build/devel/share/gennodejs/ros/detect_aruco")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/yu/ros/workspace/src/detect_aruco/build/devel/lib/python2.7/dist-packages/detect_aruco")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/yu/ros/workspace/src/detect_aruco/build/devel/lib/python2.7/dist-packages/detect_aruco")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yu/ros/workspace/src/detect_aruco/build/catkin_generated/installspace/detect_aruco.pc")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/detect_aruco/cmake" TYPE FILE FILES "/home/yu/ros/workspace/src/detect_aruco/build/catkin_generated/installspace/detect_aruco-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -136,6 +182,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/detect_aruco" TYPE FILE FILES "/home/yu/ros/workspace/src/detect_aruco/package.xml")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/detect_aruco" TYPE PROGRAM FILES "/home/yu/ros/workspace/src/detect_aruco/scripts/localization.py")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

@@ -1,0 +1,6 @@
+This package is aiming at detect the dark spot in the room and and nao will go there. After it reaches the spot, it will stop and start to hide.
+
+for running the package. 
+1. roslaunch detect_walk nao.launch
+2. rosrun detect_walk mu_detect
+3. rosrun detect_walk squat.py

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nao/detect_test/src/detector/build/devel/setup.sh

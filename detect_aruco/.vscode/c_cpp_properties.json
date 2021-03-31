@@ -8,7 +8,7 @@
       "includePath": [
         "/opt/ros/kinetic/include/**",
         "/home/yu/ros/workspace/src/detect_aruco/include/**",
-        "/home/yu/ros/workspace/src/detect_darkness/include/**",
+        "/home/yu/ros/workspace/src/detect_aruco/srv/**",
         "/usr/include/**"
       ],
       "name": "ROS"

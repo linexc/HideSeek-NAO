@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/nao/YuMu/workspace/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/nao/YuMu/workspace/src/detect_aruco/include/**",
+        "/home/nao/detect_test/src/detector/include/**",
+        "/home/nao/ros/catkin_ws/src/yu_detect_dark/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

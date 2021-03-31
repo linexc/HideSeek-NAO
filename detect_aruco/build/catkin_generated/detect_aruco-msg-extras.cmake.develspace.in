@@ -1,0 +1,2 @@
+set(detect_aruco_MESSAGE_FILES "/home/yu/ros/workspace/src/detect_aruco/msg/arucomsgs.msg")
+set(detect_aruco_SERVICE_FILES "/home/yu/ros/workspace/src/detect_aruco/srv/dest.srv;/home/yu/ros/workspace/src/detect_aruco/srv/obstacleDetect.srv;/home/yu/ros/workspace/src/detect_aruco/srv/walk_polar.srv;/home/yu/ros/workspace/src/detect_aruco/srv/localization.srv;/home/yu/ros/workspace/src/detect_aruco/srv/destination.srv")
